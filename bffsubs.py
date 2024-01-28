@@ -34,7 +34,7 @@ class SubdomainBruteforcer:
             f.write('\n'.join(domain))
 
     def _bruteforce(self):
-        for tool in tqdm(self.bruteforce_tools, desc=colorama.Fore.BLUE + "Bruteforce ile Subdomain Aranıyor", total=len(self.bruteforce_tools)):
+        for tool in tqdm(self.bruteforce_tools, desc=colorama.Fore.BLUE + "Bruteforcing", total=len(self.bruteforce_tools)):
             if tool not in self.bruteforce_tools and 'all' not in self.bruteforce_tools:
                 continue
 
@@ -45,7 +45,7 @@ class SubdomainBruteforcer:
                 raise ValueError('Out-of-scope file path is required for the selected bruteforce tool: -os/--out_of_scope')
 
             try:
-                output = subprocess.check_output(['gobuster', 'dns', '-d', self.domain_name, '-w', f'wordlists/bruteforce-subdomains/{tool}.txt']).decode()
+                output = subprocess.check_output(['gobuster', 'dns', '-d', self.domain_name, '-w', f'wordlists/{tool}.txt']).decode()
                 tool_subdomains = set(output.splitlines())
                 self.temp_subdomains.update(tool_subdomains)
                 print(colorama.Fore.GREEN + f"{tool}: {len(tool_subdomains)} Total subdomains: {len(self.temp_subdomains)}")
@@ -110,7 +110,7 @@ class SubdomainBruteforcer:
         with open(self.output_file, 'a') as f:
             f.write('\n' + '\n'.join(all_subdomains))
 
-        print(colorama.Fore.GREEN + f"Total {len(all_subdomains)} subdomains found. Successfully written to the '{self.output_file}' file.")
+        print(colorama.Fore.GREEN + f"Subdomains Successfully written to the '{self.output_file}' file.")
 
 # Input
 parser = argparse.ArgumentParser(

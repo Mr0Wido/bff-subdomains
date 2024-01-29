@@ -51,7 +51,7 @@ class SubdomainBruteforcer:
                 print(colorama.Fore.RED + f"{tool} returned non-zero exit status {e.returncode}. Error message: {e.output.decode()}")
                 continue
 
-            print(colorama.Fore.GREEN + f"{tool}: {len(tool_subdomains)} Total subdomains: {len(self.temp_subdomains)} Successfully printed to the '{tool}.txt' file.")")
+            print(colorama.Fore.GREEN + f"{tool}: {len(tool_subdomains)} Total subdomains: {len(self.temp_subdomains)} Successfully printed to the '{tool}.txt' file.")
 
 # Input
 parser = argparse.ArgumentParser(

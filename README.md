@@ -51,3 +51,6 @@ os
 
 ### Notes
 This script is intended for educational purposes and should be used responsibly. Always obtain proper authorization before performing any penetration testing activities.
+
+### Todo
+- [ ] Add **WFUZZ** option beside of Gobuster

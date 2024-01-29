@@ -1,8 +1,8 @@
 # A Subdomain Bruteforcer Tool
-This Python script is a subdomain bruteforcer tool. It uses various wordlists and the Gobuster tool to perform DNS enumeration and find subdomains of a given domain. The script also allows for the removal of out-of-scope domains from the results.
+This Python script is a subdomain bruteforcer tool. It uses various wordlists and the Gobuster tool to perform DNS enumeration and find subdomains of a given domain. 
 
 ### Output
-The script outputs the total number of subdomains found and writes them to a file named `{domain_name}_bfsubs.txt`. Out-of-scope domains are removed from the results.
+The script outputs the total number of subdomains found and writes them to a file named `{domain_name}_bfsubs.txt`. 
 
 ### Installation
 ```
@@ -13,7 +13,7 @@ python3 bffsubs.py
 
 ### Usage
 ```
-python3 tools/bfsubs.py -u example.com -bfs fierce -os out.txt
+python3 bfsubs.py -u example.com -bfs fierce -os out.txt
 ```
 
 ### Wordlists
@@ -38,7 +38,6 @@ bf11m | subdomains-top1million-110000.txt(114441)
 -h | --help | Show this help message and exit.
 -u | --url | Domain name to scan. This argument is required.
 -bfs | --bruteforce_scan | Bruteforcing with specific wordlists using Gobuster. This argument is optional and can take multiple values. If not provided, all available wordlists will be used.
--os | --out_of_scope | Out-of-scope domains file path. This argument is required.
 
 ### Requirments
 ```
@@ -46,7 +45,6 @@ colorama
 tqdm
 argparse
 subprocess
-os
 ```
 
 ### Notes

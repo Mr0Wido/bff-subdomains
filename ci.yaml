@@ -21,4 +21,4 @@ jobs:
           verbose: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-          slug: Mr0Wido/bfff-subdomains
+          slug: Mr0Wido/bff-subdomains

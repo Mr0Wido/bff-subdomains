@@ -1,5 +1,6 @@
 codecov: 
   token: ff487339-77b1-487d-b785-f3bc8a12fc16
+  branch: main
 name: Bruteforce for subdomains
 on: [push, pull_request]
 jobs:
